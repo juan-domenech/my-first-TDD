@@ -33,6 +33,10 @@
       expect( PasswordValidation('Abc1defg2hijk!') ).toEqual(true);
     });
 
+    it("should return 'false' when password is less than 10 characters long", function() {
+      expect( PasswordValidation('Abc1g2k!') ).toEqual(false);
+    });
+
     it("should return 'true' when contains '!'", function() {
       expect( PasswordValidation('Abc1defg2hijk!') ).toEqual(true);
     });

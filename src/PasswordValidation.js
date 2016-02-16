@@ -26,6 +26,10 @@ function PasswordValidation ( password ) {
 	} else if ( password.match(/[\$\#\%\&\-\!\?]/g) == null ){
 		return false;
 
+	// At least 10 characters long
+	} else if ( password.length < 10 ){
+		return false;
+
 	// Everything went well. Password valid.
 	} else {
 	return true;
