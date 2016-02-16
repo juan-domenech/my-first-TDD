@@ -22,7 +22,11 @@
     });
 
     it("should return 'false' when there is no letter in uppercase", function() {
-      expect( PasswordValidation('') ).toEqual(false);
+      expect( PasswordValidation('abc1defg2hijk!') ).toEqual(false);
+    });
+
+    it("should return 'true' when there is a letter in uppercase", function() {
+      expect( PasswordValidation('Abc1defg2hijk!') ).toEqual(true);
     });
 
     it("should return 'true' when there are 2 or more numbers", function() {
